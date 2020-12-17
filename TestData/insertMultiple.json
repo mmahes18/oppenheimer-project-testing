@@ -1,0 +1,27 @@
+[
+	{
+		"birthday": "17051983",
+		"gender": "Male",
+		"name": "David",
+		"natid": "G1234$$$$",
+		"salary": "5000",
+		"tax": "1000"
+	},
+	{
+		"birthday": "17051985",
+		"gender": "Male",
+		"name": "Mark",
+		"natid": "G2234$$$$",
+		"salary": "6000",
+		"tax": "2000"
+	},
+	{
+	
+		"birthday": "17051983",
+		"gender": "Female",
+		"name": "Antony",
+		"natid": "G3234$$$$",
+		"salary": "6000",
+		"tax": "2000"
+	}
+]
