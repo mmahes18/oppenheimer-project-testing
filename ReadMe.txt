@@ -14,7 +14,7 @@
   - These test cases to be tested with JMETER tool.
 
 
-****Documents included: 
+****Documents/Scripts included: 
 
 1) /TestCase/Oppenheimer-TestCases.xlsx
 
@@ -23,4 +23,12 @@
 4) /TestData/UploadData.csv
 5) /TestData/Empty.csv
 
-6) ReadMe.txt
+***Automation - Functional Requirements
+6) Automation/Functional/Funtional_Script.json
+7) Automation/Functional/Steps_To_Perform_Funtional_Testing Via_Postman.docx
+
+***Automation - Non-Functional Requirements
+8) Automation/Non-Functional/Non_Functional_AutomatedScript.jmx
+9) Automation/Non-Functional/Steps_To_Perform_NonFuntional_Testing Via_JMETERTool.docx
+
+10) ReadMe.txt
