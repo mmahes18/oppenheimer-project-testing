@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "4a09fd06-45c6-4996-ab71-48a8b9a62738",
+		"name": "Oppenheimer Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/calculator/insert",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b4f31d91-04c5-4e8f-8db0-83f15d9678a6",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.value).to.eql(100);\r",
+							"});\r",
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"birthday\": \"17051983\",\r\n  \"gender\": \"M\",\r\n  \"name\": \"Mani\",\r\n  \"natid\": \"G1234$$$$\",\r\n  \"salary\": \"5000.00\",\r\n  \"tax\": \"111.11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/calculator/insert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calculator",
+						"insert"
+					]
+				},
+				"description": "Insert Single"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/calculator/uploadLargeFileForInsertionToDatabase",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b4f31d91-04c5-4e8f-8db0-83f15d9678a6",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.value).to.eql(100);\r",
+							"});\r",
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"contentType": "multipart/form-data",
+							"type": "file",
+							"src": "/C:/Users/manib/OneDrive/Desktop/Mahi/sampletest.csv"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/calculator/uploadLargeFileForInsertionToDatabase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calculator",
+						"uploadLargeFileForInsertionToDatabase"
+					]
+				},
+				"description": "UploadLargeFile"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/calculator/insertMultiple",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b4f31d91-04c5-4e8f-8db0-83f15d9678a6",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.value).to.eql(100);\r",
+							"});\r",
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n\t{\r\n\t\t\"birthday\": \"17051983\",\r\n\t\t\"gender\": \"Male\",\r\n\t\t\"name\": \"David\",\r\n\t\t\"natid\": \"G1234$$$$\",\r\n\t\t\"salary\": \"5000\",\r\n\t\t\"tax\": \"1000\"\r\n\t},\r\n\t{\r\n\t\t\"birthday\": \"17051985\",\r\n\t\t\"gender\": \"Male\",\r\n\t\t\"name\": \"Mark\",\r\n\t\t\"natid\": \"G2234$$$$\",\r\n\t\t\"salary\": \"6000\",\r\n\t\t\"tax\": \"2000\"\r\n\t},\r\n\t{\r\n\t\r\n\t\t\"birthday\": \"17051983\",\r\n\t\t\"gender\": \"Female\",\r\n\t\t\"name\": \"Antony\",\r\n\t\t\"natid\": \"G3234$$$$\",\r\n\t\t\"salary\": \"6000\",\r\n\t\t\"tax\": \"2000\"\r\n\t}\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/calculator/insertMultiple",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calculator",
+						"insertMultiple"
+					]
+				},
+				"description": "InsertMultiple"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/calculator/taxRelief",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"emp123\",\r\n  \"birthday\": \"17051983\",\r\n  \"gender\": \"M\",\r\n  \"name\": \"David\",\r\n  \"natid\": \"G1234$$$$\",\r\n  \"salary\": \"5000\",\r\n  \"tax\": \"1000\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/calculator/taxRelief",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calculator",
+						"taxRelief"
+					]
+				},
+				"description": "TaxRelief"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/calculator/taxReliefSummary",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a53b0ceb-7eda-47d3-a580-6610ff1269b0",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.value).to.eql(100);\r",
+							"});\r",
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 202]);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"emp123\",\r\n  \"birthday\": \"17051983\",\r\n  \"gender\": \"M\",\r\n  \"name\": \"David\",\r\n  \"natid\": \"G1234$$$$\",\r\n  \"salary\": \"5000\",\r\n  \"tax\": \"1000\"\r\n}"
+				},
+				"url": {
+					"raw": ""
+				},
+				"description": "TaxReliefSummary"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
